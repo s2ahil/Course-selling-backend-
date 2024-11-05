@@ -19,7 +19,7 @@ app.use(cors())
 async function mongoConnection() {
     try {
       await mongoose.connect(
-        "mongodb+srv://sahil:s2ahil@cluster0.nacyzus.mongodb.net?retryWrites=true&w=majority",
+       process.env.mongodb_url,
         {
           useNewUrlParser: true,
           useUnifiedTopology: true,
